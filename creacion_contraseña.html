@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+
+    /** 
+     *con el root ya definimos los colores y las variables a utilizar 
+     */
+    :root { 
+      --white: #ffffff;
+      --black: #000000;
+      --very-light-pink: #C7C7C7; /* variables para establecer el color */
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      /**
+       * medidas
+       */
+    
+      --sm: 14px; 
+      --md: 16px;
+      --lg: 18px;
+    }
+  /**
+    * coje todo el body para agregar un estilo
+    */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif; /* tipo de letra */
+    }
+
+  /**
+   * toda la paguina fondo
+   */
+    .login {
+      width: 100%; /* para cojer el ancho de la paguina */
+      height: 100vh;  /*para asigar el tamaño de la altura correctamente*/
+      display: grid; /* asignar un para arreglar el tamaño  */
+      place-items: center; /* centrarnos nuestro contenido como vertical como horizontalmente */
+    }
+
+    /**
+     *lleva todo los estilos que tiene el for-container
+     */
+    .form-container {
+      display: grid;
+      width: 300px;
+    }
+    /**
+     * para añadir un tamaño al logo
+     */
+    .logo {
+      width: 150px;
+      margin-bottom: 48px; /* para dejar espacio en la parte de abajo */
+      justify-self: center; /* para justificar en centro */
+
+      display: none; /* para que no aparesca en disponce */
+
+    }
+    .title {
+      font-size: var(--lg);/* tamaño de la letras */
+      margin-bottom: 15px;/* dejar espacio despues de title */
+      text-align: center; /* alinear el texto en el centro */
+    }
+    .subtitle {
+      color: var(--very-light-pink);/* añadir un color a la letra */
+      font-size: var(--md);/* tamaño de letra */
+      font-weight: 300;/* para el peso de la fuente mejor estilo sin los px*/
+      margin-top: 0; /* para dejar un espacio en parte de arriba */
+      /* margin-left: 50px; */ /* un top a la iquierda */
+      /* margin-right: 50px; /* top a la derecha */
+      margin-bottom: 32px;/* dejar espacio despues del subtitle */
+      text-align: center; /* para que el texto este en el centro */
+    }
+    .form {
+      display: flex;/* cuando se utiliza un flex se añade una direción al flex */
+      flex-direction: column;/* para que se ubique en columna */
+    }
+    .label {
+      font-size: var(--sm);
+      font-weight: bold; /* les da un grosor bonito a la letra */
+      margin-bottom: 10px; /* el espacio al final */
+    }
+    .labe {
+      font-size: var(--sm);
+      font-weight: bold; /* les da un grosor bonito a la letra */
+      margin-bottom: 10px; /* el espacio al final */
+    }
+    .input {
+      background-color: var(--text-input-field);/* añadir un color estilo buton */
+      border: none;/* para que desaparesca los bordes  */
+      border-radius: 8px; /* les da un borde  redondiado */
+      height: 30px; /* una altura al boton */
+      font-size: var(--md); 
+      padding: 6px;/* añade mas altura*/
+      margin-bottom: 12px; /* espacio al final */
+    }
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;/* para la forma circular a los bordes */
+      border: none;/* para que desaparesca el color de los bordes */
+      color: var(--white); /* para las letras */
+      width: 100%;/* parar la altura del boton */
+      height: 50px;/* para que se mas alto */
+      cursor: pointer; /* para que nos salga una manita */
+      font-size: var(--md);
+      font-weight: bold;/* para que sea mas gruesito */
+    }
+    .login-button {
+      margin-top: 14px;
+      margin-bottom: 30px;
+    }
+    .password1{
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    /* para que se nos quite el logo despues de los 640 px */
+    @media (max-width: 640px) {
+      .logo {
+        display: block;/* parar que se nos vea el logo con las medidas establecidas */
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="login"><!-- contiene todo el fondo -->
+    <div class="form-container"><!-- contiene todo el contenido -->
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo"><!-- añadir el logo -->
+
+      <h1 class="title">Create a new password</h1><!-- creacion de titulos -->
+      <p class="subtitle">Enter a new passwrd for yue account</p> <!-- creacion de subtitle -->
+
+      <form action="/" class="form"><!-- contine el formulario los label y los inpusts -->
+        
+        <label 6 for="password" class="label">Password</label><!-- añadir la label el nombre  -->
+        <input type="password" id="password" placeholder="*********" class="input input-password">
+
+        <label for="new-password" class="labe2">Re-enter password</label>
+        <input type="password" id="new-password" placeholder="*********" class="input input-password">
+ 
+        <input type="submit" value="Confirm" class="primary-button login-button"><!-- creacion del boton confirmar -->
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>
